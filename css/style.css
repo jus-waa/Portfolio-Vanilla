@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.border-light {
+    border: 0.5px solid rgba(170, 170, 170, 0.45);
+    padding: 20px;
+}
+body {
+    padding: 3rem;
+}
+header {
+    display: grid;
+    grid-template-areas: 
+    "profile description";
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+    margin: 0.5rem;
+}
+section {
+    display: grid;
+    grid-template-areas:
+    "education skills";
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+    margin: 0.5rem;
+    height: auto;
+    width: auto;
+}
