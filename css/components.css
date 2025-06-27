@@ -21,9 +21,6 @@
 .description ul {
     display: flex;
 }
-.description li {
-    list-style-type: none;
-}
 .socmed-links {
     height: 10rem;
     width: auto;
@@ -35,6 +32,11 @@
     border-radius: 0.5rem;
     grid-area: education;
 }
+.education li {
+    padding: 10px;
+    border-left: 0.5px solid rgba(170, 170, 170, 0.45);
+
+}
 .skills {
     display: flex;
     flex-direction: column;
@@ -45,12 +47,12 @@
 .skills ul {
     display: flex;
     gap: 20px;
+    margin-left: 16px;
 }
 .skills li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    list-style-type: none;
     border: 0.5px solid rgba(170, 170, 170, 0.45);
     border-radius: 0.5rem;
     width: 10rem;
