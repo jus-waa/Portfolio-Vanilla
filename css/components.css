@@ -12,7 +12,6 @@
     height: 12rem;
     width: 12rem;
     border-radius: 0.5rem;
-    margin-left: 10px;
     padding: 0;
     grid-area: profile;
     cursor: pointer;
@@ -20,9 +19,6 @@
     transition: 0.5s ease-in-out;
     transition-duration: 0.5s;
     transition-delay: 0.2s;
-}
-.profile:hover {
-    transform: rotateY(180deg);
 }
 .profile::before, .profile::after {
     content: '';
@@ -45,6 +41,9 @@
 .profile:hover::before,
 .profile:hover::after {
     opacity: 1;
+}
+.profile:hover {
+    transform: rotateY(180deg);
 }
 .description {
     display: flex;
@@ -70,7 +69,6 @@
 /* section */
 .education {
     position: relative;
-    cursor: pointer;
     background-color: #fff;
     border-radius: 0.5rem;
     grid-area: education;
@@ -95,9 +93,35 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
+    position: relative;
     border: 0.5px solid rgba(170, 170, 170, 0.45);
     border-radius: 0.5rem;
     width: 10rem;
     padding: 0 10px;
-
+    transition-duration: 0.5s;
+}
+.skills li::before, .skills li::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    border-radius: 0.5rem;
+    translate: -50% -50%;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    background-image: conic-gradient(#FFD700, #FFB700, #FFA500, #FF8C00, #FFD700);
+    z-index: -1; 
+}
+.skills li:hover::before, .skills li:hover::after {
+    opacity: 1;
+}
+.skills li:hover {
+    border: 0.5px solid rgba(170, 170, 170, 0.1);
+}
+.skills li::after {
+    filter: blur(1rem);
 }
