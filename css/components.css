@@ -1,16 +1,50 @@
 /* header */
+.profile-img {
+    height: 11.5rem;
+    width: 11.5rem;
+    border-radius: 0.5rem;
+}
 .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     height: 12rem;
     width: 12rem;
     border-radius: 0.5rem;
+    margin-left: 10px;
     padding: 0;
     grid-area: profile;
     cursor: pointer;
     transform-style: preserve-3d;
-    transition-duration: 1s;
+    transition: 0.5s ease-in-out;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
 }
 .profile:hover {
     transform: rotateY(180deg);
+}
+.profile::before, .profile::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    padding: 1px;
+    border-radius: 0.5rem;
+    translate: -50% -50%;
+    background-image: conic-gradient(#FFD700, #FFB700, #FFA500, #FF8C00, #FFD700);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: -1; 
+}
+.profile::after {
+    filter: blur(1rem);
+}
+.profile:hover::before,
+.profile:hover::after {
+    opacity: 1;
 }
 .description {
     display: flex;
@@ -35,13 +69,15 @@
 }
 /* section */
 .education {
+    position: relative;
+    cursor: pointer;
+    background-color: #fff;
     border-radius: 0.5rem;
     grid-area: education;
 }
 .education li {
-    padding: 10px;
-    border-left: 0.5px solid rgba(170, 170, 170, 0.45);
-
+    padding: 20px;
+    border-bottom:  0.5px solid rgba(170, 170, 170, 0.45);
 }
 .skills {
     display: flex;
