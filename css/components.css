@@ -5,6 +5,12 @@
     border-radius: 0.5rem;
     padding: 0;
     grid-area: profile;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition-duration: 1s;
+}
+.profile:hover {
+    transform: rotateY(180deg);
 }
 .description {
     display: flex;
